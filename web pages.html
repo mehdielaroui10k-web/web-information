@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موسوعة المعلومات الشاملة</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #007acc, #005999);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border-top: 5px solid #007acc;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h2 {
+            color: #007acc;
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        
+        .card ul {
+            padding-right: 20px;
+            margin: 15px 0;
+        }
+        
+        .card li {
+            margin-bottom: 8px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            transition: background 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn:hover {
+            background-color: #218838;
+        }
+        
+        .card.health {
+            border-top-color: #dc3545;
+        }
+        
+        .card.health h2 {
+            color: #dc3545;
+        }
+        
+        .card.health .btn {
+            background-color: #dc3545;
+        }
+        
+        .card.health .btn:hover {
+            background-color: #bd2130;
+        }
+        
+        .card.space {
+            border-top-color: #6f42c1;
+        }
+        
+        .card.space h2 {
+            color: #6f42c1;
+        }
+        
+        .card.space .btn {
+            background-color: #6f42c1;
+        }
+        
+        .card.space .btn:hover {
+            background-color: #5a32a3;
+        }
+        
+        .card.history {
+            border-top-color: #fd7e14;
+        }
+        
+        .card.history h2 {
+            color: #fd7e14;
+        }
+        
+        .card.history .btn {
+            background-color: #fd7e14;
+        }
+        
+        .card.history .btn:hover {
+            background-color: #e06d06;
+        }
+        
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>موسوعة المعرفة الرقمية</h1>
+        <p>اكتشف معلومات قيمة ومفيدة في مختلف المجالات اليومية والعلمية</p>
+    </header>
+
+    <main class="grid-container">
+
+        <!-- القسم 1: التقنية -->
+        <div class="card">
+            <h2>💻 علوم الكمبيوتر والذكاء الاصطناعي</h2>
+            <ul>
+                <li><strong>الذكاء الاصطناعي التوليدي:</strong> يعتمد على شبكات عصبيّة تحاكي عقل الإنسان لإنتاج نصوص وصور برمجية دقيقة.</li>
+                <li><strong>برنامج VS Code:</strong> يُعد المحرر الأكثر شعبية عالمياً بفضل الإضافات الذكية وسرعة معالجة الأكواد.</li>
+                <li><strong>أمن المعلومات:</strong> استخدام كلمة مرور قوية وتفعيل التحقق الثنائي يحميك من 99% من الهجمات السيبرانية.</li>
+            </ul>
+            <button class="btn" onclick="alert('تم تفعيل وضع القراءة لقسم التقنية!')">تحديث المعلومات</button>
+        </div>
+
+        <!-- القسم 2: الصحة -->
+        <div class="card health">
+            <h2>🍎 الصحة والتغذية السليمة</h2>
+            <ul>
+                <li><strong>شرب الماء:</strong> يساعد تناول 8 أكواب من الماء يومياً على تحسين التركيز وتنشيط الدورة الدموية.</li>
+                <li><strong>النوم المنتظم:</strong> النوم من 7 إلى 8 ساعات ليلاً يجدد خلايا الدماغ ويقوي جهاز المناعة بشكل ملحوظ.</li>
+                <li><strong>المشي السريع:</strong> ممارسة المشي لمدة 30 دقيقة يومياً تقلل من مخاطر الإصابة بأمراض القلب.</li>
+            </ul>
+            <button class="btn" onclick="alert('نصيحة اليوم: قلل السكريات واشرب ماء الآن!')">نصيحة صحية سريعة</button>
+        </div>
+
+        <!-- القسم 3: الفضاء -->
+        <div class="card space">
+            <h2>🚀 عجائب الفضاء والكون</h2>
+            <ul>
+                <li><strong>كوكب المشتري:</strong> هو أضخم كواكب المجموعة الشمسية وتتسع مساحته لأكثر من 1300 كوكب مثل الأرض.</li>
+                <li><strong>السنة الضوئية:</strong> هي وحدة قياس مسافة وليس وقت، وتعبر عن المسافة التي يقطعها الضوء في سنة كاملة.</li>
+                <li><strong>الثقوب السوداء:</strong> مناطق في الفضاء تتمتع بجاذبية هائلة جداً لدرجة تمنع الضوء نفسه من الهروب منها.</li>
+            </ul>
+            <button class="btn" onclick="alert('رحلتنا القادمة إلى كوكب المريخ، استعد!')">استكشف الكون</button>
+        </div>
+
+        <!-- القسم 4: تطوير الذات -->
+        <div class="card history">
+            <h2>🧠 علم النفس وتطوير الذات</h2>
+            <ul>
+                <li><strong>قاعدة 5 دقائق:</strong> إذا كان هناك عمل يستغرق أقل من خمس دقائق، قم بنهائه فوراً لتجنب التسويف.</li>
+                <li><strong>الاستمرارية:</strong> قراءة 10 صفحات فقط كل يوم تجعلك تقرأ حوالي 15 كتاباً كاملاً في السنة الواحدة.</li>
+                <li><strong>التعلم الفعال:</strong> أفضل طريقة لترسيخ أي معلومة جديدة في عقلك هي محاولة شرحها لشخص آخر.</li>
+            </ul>
+            <button class="btn" onclick="alert('أنت قادر على تحقيق أهدافك اليوم، ابدأ الآن!')">جرعة تحفيز</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>تم تصميم هذا الموقع بكل حب ومشاركة لتعميم الفائدة الفكرية © 2026</p>
+    </footer>
+
+</body>
+
+</html>
